@@ -1,0 +1,16 @@
+@use '../utils/mixins' as mx;
+@use '../utils/functions' as fn;
+
+.header {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  background-color: fn.get-color('dark-primary');
+  box-shadow: 0px 1px 0px 0px #292932 inset;
+
+  @include mx.mq('lg') {
+    grid-area: header;
+    padding: 24px 36px;
+    justify-content: space-between;
+  }
+}
