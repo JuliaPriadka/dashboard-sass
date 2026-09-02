@@ -1,0 +1,22 @@
+@use '../utils/functions' as fn;
+@use '../utils/placeholders';
+
+.notification {
+  @extend %details;
+
+  flex-shrink: 0;
+  min-width: 28px;
+  height: 20px;
+  padding: 0 10px;
+  border-radius: 12px;
+  background-color: fn.get-color('danger');
+  columns: fn.get-color('light');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+
+  &.is-notify {
+    opacity: 1;
+  }
+}
